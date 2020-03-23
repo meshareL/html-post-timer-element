@@ -216,6 +216,7 @@ class HTMLPostTimerElement extends HTMLElement {
         if (!interval) return;
 
         window.clearInterval(interval);
+        disabling.delete(this);
     }
 }
 
