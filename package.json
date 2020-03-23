@@ -1,6 +1,6 @@
 {
   "name": "@tomoeed/html-post-timer-element",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Send the HTTP request and count down",
   "author": "meshare",
   "homepage": "https://github.com/meshareL/html-post-timer-element",
