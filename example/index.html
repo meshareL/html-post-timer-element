@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html-post-timer-element</title>
+    <style type="text/css">
+        post-timer { display: block }
+    </style>
+</head>
+<body>
+    <input id="csrf" name="_csrf" value="token" type="hidden">
+
+    <post-timer href="/post" forbidden-time="120" for="csrf">
+        <input name="type" value="post" type="hidden">
+        <span data-original-content>Get captcha</span>
+        <p data-timekeeping-content hidden>
+            Resend after
+            <span data-timekeeping-content-time></span>
+            seconds
+        </p>
+        <span data-afresh-content hidden>Resend</span>
+    </post-timer>
+
+    <script type="application/javascript" src="../dist/index.umd.js"></script>
+</body>
+</html>
