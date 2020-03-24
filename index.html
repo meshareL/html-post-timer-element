@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<title>HTML Post Timer Element</title>
+	<meta name="description" value="HTMLPostTimerElement demo">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@primer/css@14.2.0/dist/primer.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/github-gist.css">
+	<style type="text/css">
+		post-timer { display: block; }
+	</style>
+</head>
+<body>
+	<div class="container-sm" style="margin-top: 150px">
+		<form class="mb-3" action="#" accept-charset="utf-8">
+			<input id="csrf" name="csrf" value="token" type="hidden">
+
+			<div class="form-group mb-3">
+				<label class="d-block" for="anything">Enter any data</label>
+				<div class="input-group">
+					<input id="anything" class="form-control" name="value" required type="text">
+					<div class="input-group-button">
+						<post-timer class="btn" href="https://httpbin.org/anything" forbidden-time="120" for="csrf, anything">
+							<span data-original-content>Get</span>
+							<span data-timekeeping-content hidden>
+								Get it again after
+								<span class="mx-1" data-timekeeping-content-time></span>
+								seconds
+							</span>
+							<span data-afresh-content hidden>Once again</span>
+						</post-timer>
+					</div>
+				</div>
+			</div>
+		</form>
+		
+		<button class="btn" type="button">Reset the state of the post-timer element</button>
+
+		<div class="mt-6">
+			<p class="text-mono f4 mb-0">Request Body</p>
+			<pre class="language-json">
+				<code></code>
+			</pre>
+		</div>
+	</div>
+
+	<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/@tomoeed/html-post-timer-element@1.0.2/dist/index.umd.min.js"></script>
+	<script type="application/javascript" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+	<script type="application/javascript" src="./static/index.js"></script>
+</body>
+</html>
